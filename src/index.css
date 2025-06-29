@@ -20,19 +20,64 @@ code {
 }
 
 header {
+  padding: 1em;
   background-color: blue;
   color: white;
 }
 
 footer {
+  padding: 0.5em;
   background-color: blue;
   color: white;
   text-align: center;
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
+  font-size: 32px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: rgb(202, 202, 202);
+  margin: 1em;
+  padding: 1em;
+
+  font-size: 32px;
+
+  list-style: none;
+}
+
+.item input {
+  height: 48px;
+  width: 48px;
+
+  cursor: pointer;
+}
+
+.item label {
+  justify-self: flex-start;
+}
+
+.item label:focus {
+  text-decoration: underline;
+}
+
+.item svg {
+  height: 48px;
+  width: 48px;
+  color: steelblue;
+}
+
+.item svg:focus,
+.item svg:hover {
+  color: red;
+  scale: 1.05;
+  cursor: pointer;
+}
+
+ul {
+  padding: 0;
 }
