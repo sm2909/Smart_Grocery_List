@@ -9,6 +9,7 @@ const List = ({ items, handleClick, handleDelete }) => {
           item={item}
           handleClick={handleClick}
           handleDelete={handleDelete}
+          key={item.id}
         />
       ))}
     </ul>

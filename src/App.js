@@ -23,6 +23,8 @@ function App() {
     },
   ]);
 
+  const [input, setInput] = useState("");
+
   const handleClick = (id) => {
     const newList = items.map((item) => {
       if (item.id === id) {
@@ -39,10 +41,35 @@ function App() {
     setItems(newList);
   };
 
+  const handleInput = (newInput) => {
+    setInput(newInput);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const newList = [
+      ...items,
+      {
+        id: items.length > 0 ? items[items.length - 1].id + 1 : 1,
+        item: input,
+        isChecked: false,
+      },
+    ];
+
+    setItems(newList);
+
+    setInput("");
+  };
+
   return (
     <div className="App">
       <Header />
-      <AddItem />
+      <AddItem
+        input={input}
+        handleInput={handleInput}
+        handleSubmit={handleSubmit}
+      />
       <Main
         items={items}
         handleClick={handleClick}
