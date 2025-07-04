@@ -1,6 +1,7 @@
 import Header from "./Header.js";
 import Main from "./Main.js";
 import Footer from "./Footer.js";
+import AddItem from "./AddItem.js";
 import { useState } from "react";
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <AddItem />
       <Main
         items={items}
         handleClick={handleClick}
