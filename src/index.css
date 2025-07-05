@@ -128,3 +128,18 @@ ul {
 .AddItem button:hover {
   color: red;
 }
+
+.SearchBar {
+  align-self: center;
+  width: 85%;
+  margin-top: 1em;
+}
+
+.SearchBar input {
+  font-size: 32px;
+  border: solid black 1px;
+  width: 100%;
+
+  padding: 8px;
+  height: 48px;
+}
