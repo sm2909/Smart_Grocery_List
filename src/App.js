@@ -87,7 +87,9 @@ function App() {
       />
       <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
       <Main
-        items={items}
+        items={items.filter((item) =>
+          item.item.toLowerCase().includes(searchInput.toLowerCase())
+        )}
         handleClick={handleClick}
         handleDelete={handleDelete}
       />
